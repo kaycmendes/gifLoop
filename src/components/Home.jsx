@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, Jumbotron, Container, Form, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, Jumbotron, Container, Form, Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
 
 class Home extends Component {
 
     render() {
         return (
             <>
-                <div className="ml-5 mr-5" >
-                    <Navbar className="justify-content-md-center navbar" bg="light" variant="light">
+                <div className="nav-wrapper" >
+                    <Navbar className="justify-content-md-center navbar ml-5 mr-5" bg="light" variant="light">
                         <Navbar.Brand className="" href="#home">gifLoop</Navbar.Brand>
                         <Nav className="ml-auto ">
                             <Nav.Link href="#home">About</Nav.Link>
@@ -26,11 +26,15 @@ class Home extends Component {
                         </p>
                         </Container>
                     </Jumbotron>
-                    <div className="search-bar">
-                        <Form>
+                    <div className="searchBar-wrapper">
+                        <Form className="size-lg">
                             <Row>
                                 <Col>
-                                    <Form.Control placeholder="Search for a gif" />
+                                    <InputGroup className="searchBar">
+                                        <FormControl />
+                                        <Button variant="primary">Search</Button>
+                                    </InputGroup>
+
                                 </Col>
                             </Row>
                         </Form>

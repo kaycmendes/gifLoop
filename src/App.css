@@ -1,0 +1,114 @@
+/* Inline #2 | http://localhost:3000/ */
+
+.text-center.w-80.jumbo-wrapper {
+    width: 91%;
+    margin: auto;
+}
+
+.searchBar-wrapper {
+    width: 50%;
+    margin: auto;
+}
+
+.size-lg {
+    margin: ;
+}
+
+.text-center.w-80.jumbo-wrapper {
+    /* width: 91%; */
+    width: 90%;
+}
+
+.form-control {
+    height: 3em;
+    box-shadow: 0.5em -0em 1em #6a87afde;
+}
+
+.btn.btn-primary {
+    left: ;
+    right: 4.9em;
+    position: inherit;
+}
+
+.justify-content-md-center.navbar.navbar-expand.navbar-light.bg-light {}
+
+
+.searchBar-wrapper {
+    position: relative;
+    top: -4.5em;
+}
+
+.form-control {
+    /* height: 3em; */
+    height: 4.2em;
+}
+
+.btn.btn-primary {
+    /* right: 4.9em; */
+    /* position: inherit; */
+    right: 1em;
+    position: absolute;
+    margin: ;
+    height: ;
+    width: auto;
+    top: 13px;
+    height: auto;
+}
+
+/* Inline #0 | http://localhost:3000/ */
+
+.bg-primary {
+    border-radius: 15px;
+    margin-top: 2em;
+}
+
+.form-control {
+    /* border: 1px solid #ced4da; */
+    /* border-radius: .25rem; */
+    border: 1px solid #ced4da00;
+    border-radius: 0.9rem;
+    border-top-right-radius: 1em;
+}
+
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+    margin-left: ;
+}
+
+.input-group {
+    /* padding: ''; */
+}
+
+.ml-5,
+.mx-5 {
+    /* margin-left: 3rem !important; */
+}
+
+.mr-5,
+.mx-5 {
+    /* margin-right: 3rem !important; */
+}
+
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+    border-top-right-radius: none;
+}
+
+.jumbotron {
+    padding: 6rem 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+
+
+  .nav-wrapper {
+    width: 80%;
+    margin: auto;
+    margin-top: 2em;
+  }
+  
