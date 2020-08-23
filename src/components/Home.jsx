@@ -2,39 +2,22 @@ import React, { Component } from 'react';
 import { Navbar, Nav, Jumbotron, Container, Form, Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
 import TrendingGifs from './Trending';
 import SearchForm from './SearchForm';
+import GifList from './GifList'
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
             trendGifs: [],
+            gifs: [],
             searchText: ''
         }
         this.textInput = React.createRef()
     }
 
-    handleChange() {
-        const value = this.textInput.current.value;
-        console.log(value);
-    }
-
-    handleSubmit = (e) => {
-        this.setState({
-            searchText: this.textInput.current.value
-        })
-        console.log('gg')
-        e.currentTarget.reset();
-    }
-    onClick(){
-        this.setState({
-            searchText: this.textInput.current.value
-        })
-    }
 
 
-    componentDidMount() {
-        this.trending()
-    }
+
 
 
     trending = () => {
@@ -48,12 +31,42 @@ class Home extends Component {
     }
 
 
-    onSearch() {
-        return (
-            <SearchForm onSearch={this.state.searchText} />
-        )
+
+
+    onSearch = (query) => {
+        const axios = require('axios');
+        // Make a request for a user with a given ID
+        axios.get(`http://api.giphy.com/v1/gifs/search?q=${query + ' loop'}&limit=16&api_key=FxJ5CJ4D8qcg50KUxT0O8ZCZadmWEWX6`)
+            .then(response => this.setState({
+                gifs: response.data.data
+            }))
+            .catch(err => console.log('Error fetching', err))
     }
 
+
+    handleChange() {
+        this.setState({
+            searchText: this.textInput.current.value
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+        this.onSearch(this.state.searchText)
+        e.currentTarget.reset();
+    }
+
+    handleClick() {
+        this.setState({
+            searchText: this.textInput.current.value
+        })
+        console.log('onClick');
+    }
+
+
+    componentDidMount() {
+        this.trending();
+    }
 
 
 
@@ -85,7 +98,7 @@ class Home extends Component {
                                 <Col>
                                     <InputGroup className="searchBar">
                                         <FormControl ref={this.textInput} type="text" onChange={() => this.handleChange()} />
-                                        <Button onClick={this.onClick.bind(this)}  variant="primary">Search</Button>
+                                        <Button onClick={() => this.handleClick()} variant="primary">Search</Button>
                                     </InputGroup>
 
                                 </Col>
@@ -96,6 +109,7 @@ class Home extends Component {
                 <div className="featured">
                     <h2>Featured</h2>
                     <TrendingGifs data={this.state.trendGifs} />
+                    <GifList data={this.state.gifs} />
                 </div>
 
             </>
