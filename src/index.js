@@ -2,7 +2,6 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom';
 import './App.css';
-import App from './App.js';
 import * as serviceWorker from './serviceWorker';
 import Home from './components/Home.jsx'
 
