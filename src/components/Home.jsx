@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, Jumbotron, Container, Form, Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
 import TrendingGifs from './Trending';
-import SearchForm from './SearchForm';
 import GifList from './GifList'
 
 class Home extends Component {
@@ -56,12 +55,6 @@ class Home extends Component {
         e.currentTarget.reset();
     }
 
-    handleClick() {
-        this.setState({
-            searchText: this.textInput.current.value
-        })
-        console.log('onClick');
-    }
 
 
     componentDidMount() {
@@ -98,9 +91,8 @@ class Home extends Component {
                                 <Col>
                                     <InputGroup className="searchBar">
                                         <FormControl ref={this.textInput} type="text" onChange={() => this.handleChange()} />
-                                        <Button onClick={() => this.handleClick()} variant="primary">Search</Button>
+                                        <Button type="submit" variant="primary">Search</Button>
                                     </InputGroup>
-
                                 </Col>
                             </Row>
                         </Form>
