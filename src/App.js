@@ -13,7 +13,7 @@ export default class App extends Component {
   componentDidMount() {
     this.onSearch()
   }
-  
+    
   onSearch = (query= 'league of legends') => {
     const axios = require('axios');
     // Make a request for a user with a given ID

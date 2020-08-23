@@ -1,26 +1,57 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, Jumbotron, Container, Form, Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
-import TrendingGifs from './Trending'
-
+import TrendingGifs from './Trending';
+import SearchForm from './SearchForm';
 
 class Home extends Component {
-    state = {
-        trendGifs: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            trendGifs: [],
+            searchText: ''
+        }
+        this.textInput = React.createRef()
     }
+
+    handleChange() {
+        const value = this.textInput.current.value;
+        console.log(value);
+    }
+
+    handleSubmit = (e) => {
+        this.setState({
+            searchText: this.textInput.current.value
+        })
+        console.log('gg')
+        e.currentTarget.reset();
+    }
+    onClick(){
+        this.setState({
+            searchText: this.textInput.current.value
+        })
+    }
+
 
     componentDidMount() {
         this.trending()
-      }
+    }
+
 
     trending = () => {
         const axios = require('axios');
         // Make a request for a user with a given ID
-        axios.get(`http://api.giphy.com/v1/gifs/trending?limit=6&api_key=FxJ5CJ4D8qcg50KUxT0O8ZCZadmWEWX6`)
+        axios.get(`http://api.giphy.com/v1/gifs/search?q='river loop'&limit=5&api_key=dc6zaTOxFJmzC`)
             .then(response => this.setState({
                 trendGifs: response.data.data
-            }).then(response => console.log(response))
-            )
+            }))
             .catch(err => console.log('Error fetching', err))
+    }
+
+
+    onSearch() {
+        return (
+            <SearchForm onSearch={this.state.searchText} />
+        )
     }
 
 
@@ -42,20 +73,19 @@ class Home extends Component {
                 <div className="text-center w-80 jumbo-wrapper">
                     <Jumbotron className="bg-primary" fluid>
                         <Container>
-                            <h1>Fluid jumbotron</h1>
+                            <h1>Search for gifs</h1>
                             <p>
-                                This is a modified jumbotron that occupies the entire horizontal space of
-                                its parent.
+                                That seems to be infinite...
                         </p>
                         </Container>
                     </Jumbotron>
                     <div className="searchBar-wrapper">
-                        <Form className="size-lg">
+                        <Form onSubmit={this.handleSubmit.bind(this)} className="size-lg">
                             <Row>
                                 <Col>
                                     <InputGroup className="searchBar">
-                                        <FormControl />
-                                        <Button variant="primary">Search</Button>
+                                        <FormControl ref={this.textInput} type="text" onChange={() => this.handleChange()} />
+                                        <Button onClick={this.onClick.bind(this)}  variant="primary">Search</Button>
                                     </InputGroup>
 
                                 </Col>
@@ -63,9 +93,10 @@ class Home extends Component {
                         </Form>
                     </div>
                 </div>
-
-                <h2>Trending</h2>
-                <TrendingGifs data={this.state.trendGifs} />
+                <div className="featured">
+                    <h2>Featured</h2>
+                    <TrendingGifs data={this.state.trendGifs} />
+                </div>
 
             </>
         );

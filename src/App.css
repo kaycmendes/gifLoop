@@ -1,6 +1,7 @@
 html {
     margin: auto;
     width: 80%;
+    height: 100vh;
 }
 
 .text-center.w-80.jumbo-wrapper {
@@ -19,7 +20,7 @@ html {
 }
 
 .form-control {
-    height: 3em;
+    height: 4.2vw;
     box-shadow: 0.5em -0em 2em #6a87afde;
 }
 
@@ -37,30 +38,27 @@ html {
 
 .form-control {
     /* height: 3em; */
-    height: 4.2em;
+    height: 5.2em;
 }
 
 .btn.btn-primary {
-    /* right: 4.9em; */
-    /* position: inherit; */
     right: 1em;
     position: absolute;
-
+    padding: 17px;
     width: auto;
-    top: 13px;
+    top: 18px;
+    border-radius: 15px;
     height: auto;
 }
 
-/* Inline #0 | http://localhost:3000/ */
 
 .bg-primary {
     border-radius: 15px;
-    margin-top: 2em;
+    margin-top: 0.8em;
+    color: white;
 }
 
 .form-control {
-    /* border: 1px solid #ced4da; */
-    /* border-radius: .25rem; */
     border: 1px solid #ced4da00;
     border-radius: 0.9rem;
     border-top-right-radius: 1em;
@@ -76,7 +74,7 @@ html {
 }
 
 .jumbotron {
-    padding: 6rem 2rem;
+    padding: 5vw 2rem;
     padding-right: 2rem;
     padding-left: 2rem;
 }
@@ -86,7 +84,7 @@ html {
 .nav-wrapper {
     width: 80%;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 1.1em;
 }
 
 dl,
@@ -98,15 +96,15 @@ ul {
 
 
 
-.gif-wrap {
-    list-style: none;
-}
 
 
 .gif-wrap {
     margin-left: 20px;
-    box-shadow: 0.5em .5em #36afcb;
+    box-shadow: 0.5em .5em #a6e1ee;
+    margin-top: 25px;
     border-radius: 10px;
+    list-style: none;
+    margin: auto;
 }
 
 
@@ -116,4 +114,13 @@ ul {
 
 img {
     border-radius: 10px;
+    height: 23vh;
+}
+  
+  dl, ol, ul {
+    flex-wrap: wrap;
+  }
+  
+  .form-control:focus {
+    border-color: none;
 }
