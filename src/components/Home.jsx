@@ -73,7 +73,7 @@ class Home extends Component {
                 <div className="text-center w-80 jumbo-wrapper">
                     <Jumbotron className="bg-primary" fluid>
                         <Container>
-                            <h1>Search for gifs</h1>
+                            <h1>SEARCH FOR GIFS</h1>
                             <p>
                                 Infinite ones..
                         </p>

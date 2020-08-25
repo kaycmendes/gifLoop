@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+
 html {
     margin: auto;
     width: 80%;
-    height: 100vh;
+    width: 100%;
 }
 
 .text-center.w-80.jumbo-wrapper {
@@ -46,7 +50,7 @@ html {
     position: absolute;
     padding: 17px;
     width: auto;
-    top: 0.9vw;
+    top: 0.8rem;
     border-radius: 15px;
     height: auto;
 }
@@ -77,6 +81,7 @@ html {
     padding: 5vw 2rem;
     padding-right: 2rem;
     padding-left: 2rem;
+    font-family: 'Rubik', sans-serif;
 }
 
 
@@ -91,7 +96,6 @@ dl,
 ol,
 ul {
     display: flex;
-    padding: 10px;
 }
 
 
@@ -105,8 +109,8 @@ ul {
     border-radius: 10px;
     list-style: none;
     margin: auto;
-    margin-top:35px;
-    margin-left:10px;
+    margin-top: 35px;
+    margin-left: 10px;
 }
 
 
@@ -116,13 +120,71 @@ ul {
 
 img {
     border-radius: 10px;
-    height: 23vh;
+    height: 19vh;
 }
-  
-  dl, ol, ul {
+
+dl,
+ol,
+ul {
     flex-wrap: wrap;
-  }
-  
-  .form-control:focus {
+}
+
+.form-control:focus {
     border-color: none;
 }
+
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        /* max-width: 1140px; */
+        max-width: 75rem;
+    }
+}
+
+
+/* ABOUT PAGE */
+
+
+
+/* Element | http://localhost:3000/about */
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 6vh;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0.5em -0em 2em #6a87afde;
+    border-radius: 17px;
+    width: auto;   
+    max-width: 105vh;
+    padding: 5vh;
+}
+
+/* Inline #2 | http://localhost:3000/about */
+
+.how {
+    margin-top: 11vh;
+}
+
+/* Inline #0 | http://localhost:3000/about */
+
+.how h2 
+ {
+    margin-bottom: 5vh;
+    font-family: 'Rubik', sans-serif;
+}
+p {
+    margin-top:0;
+    margin-bottom:1rem;
+    width: 50%;
+    margin: auto;
+   }
+   
