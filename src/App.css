@@ -163,7 +163,7 @@ ul {
     margin: auto;
     box-shadow: 0.5em -0em 2em #6a87afde;
     border-radius: 17px;
-    width: auto;   
+    width: auto;
     max-width: 105vh;
     padding: 5vh;
 }
@@ -176,15 +176,31 @@ ul {
 
 /* Inline #0 | http://localhost:3000/about */
 
-.how h2 
- {
+.how h2 {
     margin-bottom: 5vh;
     font-family: 'Rubik', sans-serif;
 }
+
 p {
-    margin-top:0;
-    margin-bottom:1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
     width: 50%;
     margin: auto;
-   }
-   
+}
+
+@media only screen and (max-width: 600px) {
+
+    .searchBar-wrapper {
+        width: 84%;
+    }
+
+    .searchBar-wrapper {
+        top: -4.6em;
+    }
+
+    p {
+        width: 50%;
+        width: 100%;
+    }
+
+}
