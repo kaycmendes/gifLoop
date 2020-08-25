@@ -24,7 +24,7 @@ class Home extends Component {
     trending = () => {
         const axios = require('axios');
         // Make a request for a user with a given ID
-        axios.get(`http://api.giphy.com/v1/gifs/search?q='river loop'&limit=5&api_key=dc6zaTOxFJmzC`)
+        axios.get(`https://api.giphy.com/v1/gifs/search?q='river loop'&limit=5&api_key=dc6zaTOxFJmzC`)
             .then(response => this.setState({
                 trendGifs: response.data.data
             }))
@@ -37,7 +37,7 @@ class Home extends Component {
     onSearch = (query) => {
         const axios = require('axios');
         // Make a request for a user with a given ID
-        axios.get(`http://api.giphy.com/v1/gifs/search?q=${query}&limit=10&api_key=FxJ5CJ4D8qcg50KUxT0O8ZCZadmWEWX6`)
+        axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&limit=10&api_key=FxJ5CJ4D8qcg50KUxT0O8ZCZadmWEWX6`)
             .then(response => this.setState({
                 gifs: response.data.data
             }))
