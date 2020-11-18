@@ -12,7 +12,7 @@ const TrendingGifs = props => {
   )
 
   return (
-    <ul className="gif-list">
+    <ul className="gif-list trending">
       {gifs}
     </ul>
   );

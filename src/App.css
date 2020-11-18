@@ -99,22 +99,26 @@ html {
 dl,
 ol,
 ul {
+    display: block;
+    margin-bottom: 2em;
+}
+
+.trending{
     display: flex;
 }
 
 
 
 
-
 .gif-wrap {
-    margin-left: 20px;
     box-shadow: 0.5em .5em #a6e1ee;
-    margin-top: 25px;
     border-radius: 10px;
     list-style: none;
     margin: auto;
     margin-top: 35px;
-    margin-left: 10px;
+    margin-left: 2em;
+    display: inline-block;
+    width: fit-content;
 }
 
 
