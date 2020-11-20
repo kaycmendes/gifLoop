@@ -196,6 +196,18 @@ p {
     margin: auto;
 }
 
+#notification {
+    display: none;
+    color: white;
+    background-color: #64ce83;
+    padding: 15px;
+    border-radius: 5px;
+    width: calc(100% - 100px);
+    margin-bottom: 40px;
+    position: sticky;
+    top: 15px;
+}
+
 @media only screen and (max-width: 600px) {
 
     .searchBar-wrapper {
