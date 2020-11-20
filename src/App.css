@@ -58,8 +58,8 @@ html {
 
 .bg-light {
     background-color: #fff !important;
-  }
-  
+}
+
 .bg-primary {
     border-radius: 15px;
     margin-top: 0.8em;
@@ -103,7 +103,7 @@ ul {
     margin-bottom: 2em;
 }
 
-.trending{
+.trending {
     display: flex;
 }
 
@@ -179,7 +179,7 @@ ul {
 /* Inline #2 | http://localhost:3000/about */
 
 .how {
-    margin-top: 11vh;
+    margin-top: 8vh;
 }
 
 /* Inline #0 | http://localhost:3000/about */
@@ -196,7 +196,8 @@ p {
     margin: auto;
 }
 
-#notification {
+#notification,
+#help {
     display: none;
     color: white;
     background-color: #64ce83;
@@ -205,7 +206,9 @@ p {
     width: calc(100% - 100px);
     margin-bottom: 40px;
     position: sticky;
+    text-align: center;
     top: 15px;
+    z-index: 99;
 }
 
 @media only screen and (max-width: 600px) {

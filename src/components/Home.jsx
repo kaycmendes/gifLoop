@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {Jumbotron, Container, Form, Row, Col, Button, InputGroup, FormControl} from 'react-bootstrap';
+import { Jumbotron, Container, Form, Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
 import TrendingGifs from './Trending';
 import GifList from './GifList'
-
 import Header from './Header'
+import Help from '../components/Help'
 
 class Home extends Component {
     constructor(props) {
@@ -61,15 +61,17 @@ class Home extends Component {
 
     componentDidMount() {
         this.trending();
+
     }
+
 
 
 
     render() {
         return (
             <>
+                <Help />
                 <Header />
-
                 <div className="text-center w-80 jumbo-wrapper">
                     <Jumbotron className="bg-primary" fluid>
                         <Container>
