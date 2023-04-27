@@ -15,8 +15,8 @@ const GifList = props => {
     <ul className="gif-list">
       {gifs}
       <footer>
-        Made with ❤️ by Kayc
-      </footer>
+        Made with <span aria-label='emoji' role='img'>❤️</span> by Kayc
+              </footer>
     </ul>
   );
 }
