@@ -5,7 +5,7 @@ class Gif extends React.Component {
 
   render() {
     return (
-      <li className="gif-wrap">
+      <li className="featured-gif">
         <img id={Math.round(Math.random() * (500 - 10) + 10)} onClick={this.handleClick} src={this.props.url} alt="" />
       </li>
     );

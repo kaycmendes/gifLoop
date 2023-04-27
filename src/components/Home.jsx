@@ -24,7 +24,7 @@ class Home extends Component {
     trending = () => {
         const axios = require('axios');
         // Make a request for a user with a given ID
-        axios.get(`https://api.giphy.com/v1/gifs/search?q='river loop'&limit=5&api_key=dc6zaTOxFJmzC`)
+        axios.get(`https://api.giphy.com/v1/gifs/search?q='river loop'&limit=3&api_key=FxJ5CJ4D8qcg50KUxT0O8ZCZadmWEWX6`)
             .then(response => this.setState({
                 trendGifs: response.data.data
             }))
@@ -37,7 +37,7 @@ class Home extends Component {
     onSearch = (query) => {
         const axios = require('axios');
         // Make a request for a user with a given ID
-        axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&limit=12&api_key=FxJ5CJ4D8qcg50KUxT0O8ZCZadmWEWX6`)
+        axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=FxJ5CJ4D8qcg50KUxT0O8ZCZadmWEWX6`)
             .then(response => this.setState({
                 gifs: response.data.data
             }))
@@ -78,7 +78,7 @@ class Home extends Component {
                             <h1>SEARCH FOR GIFS</h1>
                             <p>
                                 Infinite ones..
-                        </p>
+                            </p>
                         </Container>
                     </Jumbotron>
                     <div className="searchBar-wrapper">
@@ -99,6 +99,7 @@ class Home extends Component {
                     <TrendingGifs data={this.state.trendGifs} />
                     <GifList data={this.state.gifs} />
                 </div>
+            
             </>
         );
     }
